@@ -1,0 +1,9 @@
+--- Installation ---
+Follow the instruction in README.txt for a complete instructions on how to use this module.
+
+Install as normal Drupal Modules probably in the following directory
+  - sites/all/modules
+  - sites/yoursitename/modules
+  
+Go to Structure > Block > Find all the block provided by this module and assign to specific regions.
+

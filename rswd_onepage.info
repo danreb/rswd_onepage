@@ -1,0 +1,9 @@
+name = Onepage Website
+description = Available Features for Red Starfish One Page Website.
+package = Red Starfish
+core = 7.x
+php = 5.2
+
+dependencies[] = views_slideshow_cycle
+dependencies[] = colorbox
+

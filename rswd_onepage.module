@@ -1,0 +1,79 @@
+<?php
+  
+/**
+* @file
+* Redstarfish module.
+*
+* @author: Adolfo G. Nasol http://drupal.org/user/547004
+*
+*/
+
+// Add js and css
+drupal_add_css(drupal_get_path('module', 'rswd_onepage') . '/rswd_onepage.css');
+  
+/**
+ * Implements hook_permission().
+ */
+function rswd_onepage_permission() {
+  return array(
+    'administer website features' => array(
+    'title' => t('Administer Website Features'), 
+    'description' => t('Enable or Disable Onepage Website Features'),
+    ),
+  );
+}
+
+/**
+* Implements hook_menu().
+*/
+function rswd_onepage_menu() {
+  $items = array();
+  
+  $items['admin/config/system/rswd_onepage'] = array(
+  'title' => 'Manage Website Features',
+  'description' => 'Website Configuration and settings',
+  'page callback' => 'drupal_get_form',
+  'page arguments' => array('rswd_onepage_settings'),
+  'file' => 'rswd_onepage.admin.inc',
+  'access arguments' => array('administer website features'),
+  'type' => MENU_NORMAL_ITEM,
+ );
+    
+  return $items;
+}
+
+/**
+* Implementation of hook_views_api().
+**/
+function rswd_onepage_views_api() {
+  return array(
+    'api' => 3, 
+  );
+}
+
+/**
+* Implementation of hook_views_default_views().
+**/
+function rswd_onepage_views_default_views() {
+  // Check for all view file in views directory
+  $files = file_scan_directory(drupal_get_path('module', 'rswd_onepage') . '/features', '/.*\.onepage$/');
+  
+  // Add view to list of views
+  foreach ($files as $filepath => $file) {
+    require $filepath;
+    if (isset($view)) {
+      $views[$view->name] = $view;
+    }
+  }
+  
+  // At the end, return array of default views.
+  return $views;
+}
+
+// Check if slideshow caption is needed, else hide it.
+if (variable_get('rswd_onepage_slideshow_caption') === 0) { 
+     drupal_add_css('div.slide-content { display: none;}', array(
+       'type' => 'inline',
+       'every_page' => TRUE,
+     ));
+    }
