@@ -12,9 +12,9 @@ Allow users or website owners to disable/enable specific features or components 
 Demonstration
 =============
 
-Go to onepage demo website - http://onepage.cavhost.com and login using username/password of admin/admin . After logging in, you can now disable/enable specific portion of the website by going to Configuration > System > Manage Website Features . From here you can see several checkboxes to control specific components the website have like the Slideshow, Slideshow Caption, Galleery, and footers Copyright Information.
+Go to onepage demo website - http://onepage.cavhost.com and login using username/password of admin/admin . After logging in, you can now disable/enable specific portion of the website by going to Configuration > System > Manage Website Features . From here you can see several checkboxes to control specific components the website have like the Slideshow, Slideshow Caption, Gallery, and even the footers Copyright Information.
 
-Feel free to play and explore the demonstration website. This website is created from Abtik Base Theme and using onepage subtheme. You can check it out in the Appearance page of the demo website.
+Feel free to play and explore the demonstration website. This website is created from <a href="https://github.com/danreb/abtik"> Abtik Base Theme </a> and uses a subtheme I called onepage. You can check and explore it on the Appearance page of the demo website.
  
 
 Pre Installation Checklist
@@ -46,8 +46,7 @@ Doing it fast (Import using Bundle Copy)
   Don't want the hassle of configuring each content types, install bundle_copy module and import the content types definition that is included in this module. You can find it inside the folder content_types in this this module sub directory.
   
   
-Instruction for importing content types through bundle copy
-===========================================================
+<strong>Instruction for importing content types through bundle copy</strong>
 
   - Install and activate bundle_copy module
   - Navigate to Structure > Content types
@@ -59,8 +58,8 @@ Instruction for importing content types through bundle copy
   You should have a new content types, note that it is safe to uninstall the bundle copy module after importing the content types definition.
   
 
-Modules use for enhancements
-============================
+Recommended modules use for enhancements
+========================================
 
 Although not a dependencies, it is recommended to install this module for enhancement and if you have plan to use the content types exported definitions that comes along with this module.
 
@@ -94,6 +93,11 @@ Create the following image styles, this is used in the modules.
   
   
 To create the "copyright" in the footer, just create a basic page with a title of copyright and put your copyright information there. Please note, you need to use the basic page content types for this.
+
+Downloads
+=========
+
+<a href="https://github.com/danreb/rswd_onepage/downloads"> Click here</a> to download zip or tarball 
 
 
 Enjoy!
