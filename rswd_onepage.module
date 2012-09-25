@@ -71,7 +71,7 @@ function rswd_onepage_views_default_views() {
 }
 
 // Check if slideshow caption is needed, else hide it.
-if (variable_get('rswd_onepage_slideshow_caption') === 0) { 
+if ((variable_get('rswd_onepage_slideshow_caption') === 0) && (variable_get('rswd_onepage_slideshow') === 1))  { 
      drupal_add_css('div.slide-content { display: none;}', array(
        'type' => 'inline',
        'every_page' => TRUE,
